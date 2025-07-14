@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+
+    <style>
+      .box {
+        display: flex;
+      }
+
+      .box > div {
+        height: 50px;
+        width: 1px;
+        /* background-color: black; */
+      }
+
+      .box > div > div {
+        height: 50px;
+        width: 1px;
+        /* background-color: black; */
+      }
+
+      .box-2d {
+        display: flex;
+      }
+
+      .box-2d > div {
+      }
+
+      .box-2d > div > div {
+        height: 1px;
+        width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-1" class="box"></div>
+    <hr />
+    <div id="box-2" class="box"></div>
+    <hr />
+    <div id="box-3" class="box"></div>
+    <hr />
+
+    <div id="box-2d-1" class="box-2d"></div>
+  </body>
+</html>
