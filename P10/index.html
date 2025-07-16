@@ -18,9 +18,41 @@
     <hr />
 
     <!-- task-container -->
-    <div id="task-container"></div>
-    <!-- <div class="number-container">
-      <p class="task-number">1</p> -->
+    <div id="task-container">
+      <div style="display: none" class="number-container">
+        <p class="task-number">1</p>
+      </div>
+      <div style="display: none" class="task">
+        <!-- task header -->
+        <div class="task-header">
+          <p>tittle <span>2025/1/17</span></p>
+          <div>
+            <img src="./assets/done.svg" /><img src="./assets/delete.svg" />
+          </div>
+        </div>
+
+        <!-- list -->
+
+        <div class="task-list">
+          <input placeholder="task tittle" />
+          <button>create</button>
+
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <span>list 1</span>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <span>list 1</span>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <span>list 1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>

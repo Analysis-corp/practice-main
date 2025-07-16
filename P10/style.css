@@ -33,7 +33,6 @@ button:hover {
 }
 
 .task {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4px;
@@ -63,4 +62,25 @@ button:hover {
 
 #task-container {
   margin: 4px 0;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed grey;
+}
+
+.task-compeleted {
+  box-shadow: 2px 1px 3px teal;
+}
+
+span {
+  font-size: 10px;
+  color: grey;
+  padding: 5px;
+}
+
+li {
+  list-style-type: none;
 }
