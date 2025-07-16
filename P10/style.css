@@ -37,7 +37,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   padding: 4px;
-  margin: 4px o;
+  margin: 10px 2px 4px 4px;
   border-left: 3px solid red;
   border-bottom: 1px solid black;
 }
@@ -59,4 +59,8 @@ button:hover {
   margin: 0 3px;
   text-align: center;
   padding-top: 1px;
+}
+
+#task-container {
+  margin: 4px 0;
 }
