@@ -11,9 +11,15 @@
 
   <body>
     <!-- create new task -->
-    <div>
-      <input id="input-tittle" placeholder="Task Tittle" />
-      <button id="create-btn">Create</button>
+    <div style="display: flex; justify-content: space-between">
+      <div>
+        <input id="input-tittle" placeholder="Task Tittle" />
+        <button id="create-btn">Create</button>
+      </div>
+      <div>
+        <button onclick="getData()">GET</button>
+        <button onclick="setData()">SET</button>
+      </div>
     </div>
     <hr />
 

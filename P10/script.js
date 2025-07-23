@@ -1,8 +1,40 @@
+const networker = {
+  get: () => {
+    const ajax = new XMLHttpRequest();
+    ajax.open("GET", "http://195.177.255.229:3009/get", true);
+    ajax.send();
+    ajax.onload = (event) => {
+      const response = JSON.parse(event.target.responseText);
+      tasks = response;
+      console.log("data : ", response);
+      renderTasks();
+    };
+  },
+
+  set: () => {
+    const ajax = new XMLHttpRequest();
+    ajax.open("POST", "http://195.177.255.229:3009/set", true);
+    ajax.setRequestHeader("Content-Type", "application/json");
+    ajax.send(JSON.stringify(tasks));
+    ajax.onload = (event) => {
+      console.log("sent data !");
+    };
+  },
+};
+
+function getData() {
+  networker.get();
+}
+
+function setData() {
+  networker.set();
+}
+
 const inputTittle = document.querySelector("#input-tittle");
 const createBTN = document.querySelector("#create-btn");
 const taskContainer = document.querySelector("#task-container");
 
-const tasks = [];
+let tasks = [];
 
 createBTN.addEventListener("click", () => {
   // tasks.push(inputTittle.value);
@@ -74,7 +106,7 @@ function renderTasks() {
     taskHeader.appendChild(newTittle);
 
     const newDate = document.createElement("span");
-    const date = tasks[counter].date;
+    const date = new Date(tasks[counter].date);
     newTittle.appendChild(newDate);
 
     // console.log(date);
